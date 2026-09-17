@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VESTRA is a virtual wardrobe for organizing clothes and creating personal outfits.">
+  <title>VESTRA | Virtual Wardrobe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Vestra home">
+        <span class="brand-mark">V</span>
+        <span class="brand-copy"><strong>VESTRA</strong><small>virtual wardrobe</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#wardrobe">Wardrobe</a>
+        <a href="#planner">Outfit Planner</a>
+        <a href="#lookbook">Lookbook</a>
+        <a href="#insights">Insights</a>
+      </nav>
+      <button class="button button-dark" id="loginButton" type="button">Login</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Curate your closet</p>
+          <h1>Style your day from a wardrobe that never ends.</h1>
+          <p class="hero-text">Organize your pieces, mix effortlessly, and build outfits that feel like you, without the clutter.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#planner">Build an outfit</a>
+            <a class="button button-light" href="#wardrobe">Explore wardrobe</a>
+          </div>
+          <div class="stats" aria-label="Vestra statistics">
+            <div><strong>12k+</strong><span>closets curated</span></div>
+            <div><strong>4.9/5</strong><span>style ratings</span></div>
+            <div><strong>86%</strong><span>more outfit ideas</span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="City Minimal capsule edit">
+          <div class="art-card art-main"><span class="label">Capsule edit</span><h2>City Minimal</h2><p>Soft neutrals · elevated basics</p></div>
+          <div class="art-card art-palette"><small>Color story</small><div class="swatches"><i class="sand"></i><i class="rose"></i><i class="taupe"></i><i class="ivory"></i></div></div>
+        </div>
+      </section>
+
+      <section class="category-strip" aria-label="Wardrobe categories">
+        <button class="category active" data-filter="all" type="button">All</button>
+        <button class="category" data-filter="tops" type="button">Tops</button>
+        <button class="category" data-filter="dresses" type="button">Dresses</button>
+        <button class="category" data-filter="bottoms" type="button">Bottoms</button>
+        <button class="category" data-filter="outerwear" type="button">Outerwear</button>
+        <button class="category" data-filter="accessories" type="button">Accessories</button>
+      </section>
+
+      <section class="content-section" id="wardrobe">
+        <div class="section-heading"><div><p class="eyebrow">Your closet</p><h2>Fresh picks from your wardrobe</h2></div><button class="button button-light" id="addItemButton" type="button">Add item</button></div>
+        <div class="filter-bar" aria-label="Filter clothing items">
+          <button class="filter active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="tops" type="button">Tops</button>
+          <button class="filter" data-filter="dresses" type="button">Dresses</button>
+          <button class="filter" data-filter="bottoms" type="button">Bottoms</button>
+          <button class="filter" data-filter="outerwear" type="button">Outerwear</button>
+          <button class="filter" data-filter="accessories" type="button">Accessories</button>
+        </div>
+        <div class="wardrobe-grid" id="wardrobeGrid"></div>
+      </section>
+
+      <section class="content-section" id="planner">
+        <div class="planner-grid">
+          <div class="panel">
+            <p class="eyebrow">Outfit planner</p>
+            <h2>Build your perfect look</h2>
+            <p class="panel-note">Select up to four wardrobe pieces above. Your selections will appear here.</p>
+            <div class="outfit-slots">
+              <div class="slot" data-slot="tops">Top</div>
+              <div class="slot" data-slot="bottoms">Bottom</div>
+              <div class="slot" data-slot="outerwear">Layer</div>
+              <div class="slot" data-slot="accessories">Accessory</div>
+            </div>
+            <button class="button button-primary full-width" id="generateButton" type="button">Generate outfit mix</button>
+          </div>
+          <div class="panel" id="insights">
+            <p class="eyebrow">Style notes</p><h3>Recommended tone</h3>
+            <div class="insight"><small>Best vibe</small><strong id="vibe">Effortless layering</strong></div>
+            <div class="insight"><small>Color pairing</small><strong id="palette">Ivory + indigo</strong></div>
+            <div class="insight"><small>Occasion</small><strong id="occasion">Creative day out</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="lookbook">
+        <div class="section-heading"><div><p class="eyebrow">My lookbook</p><h2>Saved outfit inspiration</h2></div></div>
+        <div class="lookbook-grid">
+          <article class="look-card"><div class="look-image look-one"></div><div><small>Effortless day out</small><strong>Polished &amp; relaxed</strong></div></article>
+          <article class="look-card"><div class="look-image look-two"></div><div><small>Evening refresh</small><strong>Minimal drama</strong></div></article>
+          <article class="look-card"><div class="look-image look-three"></div><div><small>Weekend favorite</small><strong>Soft layers</strong></div></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><strong>VESTRA</strong><span>Organize your wardrobe. Dress with intention.</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

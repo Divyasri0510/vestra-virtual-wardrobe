@@ -1,0 +1,54 @@
+:root {
+  --background: #f7f2ed;
+  --surface: rgba(255, 255, 255, 0.7);
+  --text: #261d1a;
+  --muted: #705f58;
+  --line: rgba(67, 44, 33, 0.13);
+  --primary: #b16552;
+  --primary-dark: #824b3f;
+  --shadow: 0 20px 48px rgba(77, 48, 38, 0.12);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--text); font-family: Manrope, Arial, sans-serif; background: radial-gradient(circle at top left, #e8d5c9 0, transparent 32%), linear-gradient(180deg, #faf7f4, var(--background)); }
+button, a { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; }
+.site-shell { width: min(1200px, calc(100% - 32px)); margin: auto; padding-bottom: 48px; }
+.topbar { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 14px; color: white; background: linear-gradient(135deg, var(--primary), #d9917c); font-weight: 800; box-shadow: var(--shadow); }
+.brand-copy { display: flex; flex-direction: column; line-height: 1; }
+.brand-copy strong, .footer strong { font: 700 2rem/1 "Cormorant Garamond", Georgia, serif; letter-spacing: .12em; }
+.brand-copy small { margin-top: 5px; color: var(--muted); font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; }
+.main-nav { display: flex; gap: 28px; }
+.main-nav a { text-decoration: none; font-weight: 700; opacity: .78; }
+.button { display: inline-block; padding: .9rem 1.4rem; border: 0; border-radius: 999px; text-decoration: none; font-weight: 800; text-align: center; }
+.button-primary { color: white; background: linear-gradient(135deg, var(--primary), #d17d69); box-shadow: 0 14px 30px rgba(177, 101, 82, .24); }
+.button-dark { color: white; background: var(--text); }
+.button-light { color: var(--text); background: rgba(255, 255, 255, .5); border: 1px solid var(--line); }
+.hero { min-height: 610px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 36px; }
+.eyebrow { margin: 0 0 14px; color: var(--primary-dark); font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; line-height: .95; }
+h1 { max-width: 550px; margin: 0; font-size: clamp(3.4rem, 6vw, 6.2rem); letter-spacing: -.04em; }
+h2 { margin: 0; font-size: clamp(2.5rem, 4vw, 3.8rem); }
+h3 { margin: 0 0 18px; font-size: 2.4rem; }
+.hero-text { max-width: 530px; margin: 22px 0 0; color: var(--muted); font-size: 1.06rem; line-height: 1.8; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.stats { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 38px; }
+.stats div { display: flex; flex-direction: column; gap: 5px; }
+.stats strong { font-size: 1.55rem; }.stats span { color: var(--muted); font-size: .78rem; }
+.hero-art { position: relative; min-height: 500px; display: grid; place-items: center; }
+.hero-art:before { content: ""; position: absolute; inset: 8% 5% 5%; border-radius: 34px; background: linear-gradient(160deg, #ead7cd, #fffaf6); box-shadow: var(--shadow); }
+.art-card { position: absolute; border: 1px solid rgba(90, 59, 47, .1); border-radius: 26px; background: rgba(255, 255, 255, .8); box-shadow: var(--shadow); backdrop-filter: blur(10px); }
+.art-main { top: 56px; right: 30px; width: min(320px, 76%); padding: 26px; }.art-main h2 { margin: 18px 0 8px; font-size: 2.5rem; }.art-main p { margin: 0; color: var(--muted); }
+.label { display: inline-block; padding: .5rem .8rem; border-radius: 999px; color: var(--primary-dark); background: rgba(177, 101, 82, .12); font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.art-palette { bottom: 66px; left: 12px; padding: 18px 20px; }.art-palette small { display: block; margin-bottom: 12px; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }.swatches { display: flex; gap: 10px; }.swatches i { width: 28px; height: 28px; border: 2px solid white; border-radius: 50%; box-shadow: 0 8px 14px rgba(0, 0, 0, .09); }.sand { background: #d7b99d; }.rose { background: #d9a4a8; }.taupe { background: #9a867e; }.ivory { background: #f5f1ee; }
+.category-strip, .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; }.category-strip { padding: 18px 0 10px; }.category, .filter { padding: .72rem 1rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: rgba(255, 255, 255, .5); font-weight: 700; }.category.active, .filter.active { color: white; background: var(--text); border-color: var(--text); }
+.content-section { margin-top: 58px; }.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 22px; }.filter-bar { margin-bottom: 24px; }
+.wardrobe-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }.wardrobe-card { overflow: hidden; border: 1px solid rgba(59, 40, 33, .08); border-radius: 24px; background: var(--surface); box-shadow: 0 18px 30px rgba(74, 51, 43, .06); transition: transform .2s, border-color .2s; }.wardrobe-card:hover { transform: translateY(-4px); }.wardrobe-card.selected { border: 2px solid var(--primary); }.card-image { height: 220px; background-position: center; background-size: cover; }.card-body { padding: 18px; }.card-row { display: flex; align-items: start; justify-content: space-between; gap: 8px; }.card-row h3 { margin: 0; font: 700 1.1rem Manrope, Arial, sans-serif; }.piece-tag { color: var(--primary-dark); font-size: .63rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }.card-meta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; color: var(--muted); font-size: .78rem; }.card-meta span { padding: .32rem .5rem; border-radius: 999px; background: rgba(117, 84, 74, .06); }
+.planner-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; }.panel { padding: 26px; border: 1px solid var(--line); border-radius: 30px; background: rgba(255, 255, 255, .52); }.panel-note { margin: -10px 0 22px; color: var(--muted); line-height: 1.6; }.outfit-slots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 22px 0; }.slot { min-height: 108px; display: grid; place-items: center; padding: 12px; border: 1px dashed rgba(117, 84, 74, .25); border-radius: 22px; color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-align: center; text-transform: uppercase; }.slot.filled { border-style: solid; border-color: rgba(177, 101, 82, .35); color: var(--primary-dark); background: #f2e4dd; }.full-width { width: 100%; }.insight { margin-top: 12px; padding: 17px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255, 255, 255, .72); }.insight small { display: block; margin-bottom: 7px; color: var(--muted); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; }.insight strong { font-size: 1.1rem; }
+.lookbook-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }.look-card { overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: rgba(255, 255, 255, .58); }.look-image { height: 230px; background-position: center; background-size: cover; }.look-one { background-image: url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"); }.look-two { background-image: url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"); }.look-three { background-image: url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"); }.look-card div:last-child { padding: 18px; }.look-card small, .look-card strong { display: block; }.look-card small { margin-bottom: 7px; color: var(--muted); }.look-card strong { font-size: 1.12rem; }.footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 58px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); }.footer strong { color: var(--text); font-size: 1.7rem; }
+@media (max-width: 980px) { .hero { grid-template-columns: 1fr; text-align: center; }.hero-copy { display: flex; flex-direction: column; align-items: center; }.stats { justify-content: center; }.wardrobe-grid { grid-template-columns: repeat(2, 1fr); }.planner-grid { grid-template-columns: 1fr; } }
+@media (max-width: 680px) { .topbar { min-height: 76px; }.main-nav { display: none; }.hero { min-height: auto; padding: 50px 0 20px; }.hero-art { min-height: 400px; width: 100%; }.art-main { right: 8%; }.section-heading { align-items: start; flex-direction: column; }.wardrobe-grid, .lookbook-grid, .outfit-slots { grid-template-columns: 1fr; }.footer { align-items: start; flex-direction: column; } }
